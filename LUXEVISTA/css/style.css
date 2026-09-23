@@ -1,0 +1,3705 @@
+/* =====================================================
+   LUXEVISTA
+   Luxury Resort & Wellness Retreat
+   Custom CSS
+===================================================== */
+
+
+/* =====================================================
+   ROOT VARIABLES
+===================================================== */
+
+:root {
+
+    --ivory: #f5f2eb;
+    --cream: #ebe5d9;
+    --white: #ffffff;
+
+    --charcoal: #20211e;
+    --dark: #171815;
+
+    --muted: #77766f;
+
+    --gold: #a89467;
+
+    --border: rgba(32, 33, 30, 0.18);
+
+}
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: var(--ivory);
+
+    color: var(--charcoal);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.7;
+
+}
+
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+h1,
+h2,
+h3 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: 400;
+
+}
+
+
+.section-label {
+
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--muted);
+
+    margin-bottom: 25px;
+
+}
+
+
+.section-title {
+
+    font-size: clamp(42px, 5vw, 76px);
+
+    line-height: 1.05;
+
+    margin-bottom: 30px;
+
+}
+
+
+.large-text {
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    color: #55554f;
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.site-header {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+}
+
+
+.luxury-navbar {
+
+    padding: 30px 0;
+
+    background: transparent;
+
+}
+
+
+.luxury-logo {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 23px;
+
+    letter-spacing: 5px;
+
+    color: white !important;
+
+}
+
+
+.luxury-nav {
+
+    gap: 35px;
+
+}
+
+
+.luxury-nav .nav-link {
+
+    color: white;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    padding: 5px 0;
+
+    position: relative;
+
+}
+
+
+.luxury-nav .nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 1px;
+
+    background: white;
+
+    transition: 0.4s ease;
+
+}
+
+
+.luxury-nav .nav-link:hover::after,
+.luxury-nav .nav-link.active::after {
+
+    width: 100%;
+
+}
+
+
+.reserve-link {
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid rgba(255,255,255,.7);
+
+    padding-bottom: 5px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-section {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    color: white;
+
+    background-image:
+        url("../images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.58),
+            rgba(0,0,0,.15),
+            rgba(0,0,0,.25)
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding-top: 100px;
+
+}
+
+
+.hero-small-title {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-content h1 {
+
+    font-size: clamp(65px, 9vw, 140px);
+
+    line-height: .9;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-content p {
+
+    max-width: 450px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 40px;
+
+}
+
+
+.luxury-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    border: 1px solid rgba(255,255,255,.7);
+
+    padding: 15px 22px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: white;
+
+    transition: .4s ease;
+
+}
+
+
+.luxury-button:hover {
+
+    background: white;
+
+    color: var(--charcoal);
+
+}
+
+
+.hero-scroll {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro-section {
+
+    padding: 150px 0;
+
+}
+
+
+.text-link {
+
+    display: inline-block;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid var(--charcoal);
+
+    padding-bottom: 7px;
+
+    transition: .3s ease;
+
+}
+
+
+.text-link:hover {
+
+    letter-spacing: 4px;
+
+}
+
+
+/* =====================================================
+   WIDE IMAGE
+===================================================== */
+
+.wide-image-section {
+
+    height: 80vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.wide-image-section img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.image-caption {
+
+    position: absolute;
+
+    bottom: 70px;
+
+    left: 8%;
+
+    color: white;
+
+}
+
+
+.image-caption span {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.image-caption h2 {
+
+    font-size: clamp(40px, 5vw, 75px);
+
+    line-height: 1;
+
+    margin-top: 20px;
+
+}
+
+
+/* =====================================================
+   ROOMS
+===================================================== */
+
+.rooms-section {
+
+    padding: 150px 0;
+
+}
+
+
+.section-heading {
+
+    max-width: 650px;
+
+}
+
+
+.section-heading > p {
+
+    color: var(--muted);
+
+    max-width: 500px;
+
+}
+
+
+.luxury-card {
+
+    background: transparent;
+
+}
+
+
+.card-image {
+
+    height: 520px;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+
+.card-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .8s ease;
+
+}
+
+
+.luxury-card:hover .card-image img {
+
+    transform: scale(1.05);
+
+}
+
+
+.card-number {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    color: white;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.card-content {
+
+    padding: 25px 0;
+
+}
+
+
+.card-content > span {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: var(--muted);
+
+}
+
+
+.card-content h3 {
+
+    font-size: 32px;
+
+    margin: 10px 0;
+
+}
+
+
+.card-content p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    max-width: 350px;
+
+}
+
+
+.card-content a {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid var(--charcoal);
+
+    padding-bottom: 5px;
+
+}
+
+
+/* =====================================================
+   SPLIT SECTION
+===================================================== */
+
+.split-image {
+
+    height: 750px;
+
+}
+
+
+.split-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.split-content {
+
+    height: 100%;
+
+    min-height: 750px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 10%;
+
+    background: var(--cream);
+
+}
+
+
+.split-content p {
+
+    max-width: 450px;
+
+    color: var(--muted);
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =====================================================
+   WELLNESS
+===================================================== */
+
+.wellness-section {
+
+    min-height: 85vh;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    background-image:
+        url("../images/spa.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+}
+
+
+.wellness-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.45);
+
+}
+
+
+.wellness-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 650px;
+
+}
+
+
+.wellness-content .section-label {
+
+    color: rgba(255,255,255,.75);
+
+}
+
+
+.wellness-content h2 {
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    line-height: .95;
+
+    margin-bottom: 30px;
+
+}
+
+
+.wellness-content p {
+
+    max-width: 450px;
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =====================================================
+   EXPERIENCES
+===================================================== */
+
+.experiences-section {
+
+    padding: 150px 0;
+
+}
+
+
+.experience-item {
+
+    display: grid;
+
+    grid-template-columns: 60px 1fr 30px;
+
+    gap: 20px;
+
+    padding: 35px 0;
+
+    border-top: 1px solid var(--border);
+
+    align-items: center;
+
+}
+
+
+.experience-item:last-child {
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.experience-item > span {
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+}
+
+
+.experience-item h3 {
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.experience-item p {
+
+    margin: 0;
+
+    color: var(--muted);
+
+}
+
+
+.experience-item i {
+
+    font-size: 18px;
+
+    transition: .3s ease;
+
+}
+
+
+.experience-item:hover i {
+
+    transform: translate(5px,-5px);
+
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-section {
+
+    padding: 150px 0;
+
+    background: var(--cream);
+
+}
+
+
+.gallery-grid {
+
+    margin-top: 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.gallery-item {
+
+    height: 350px;
+
+    overflow: hidden;
+
+}
+
+
+.gallery-item img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .7s ease;
+
+}
+
+
+.gallery-item:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+.gallery-large {
+
+    grid-row: span 2;
+
+    height: 712px;
+
+}
+
+
+.gallery-wide {
+
+    grid-column: span 2;
+
+}
+
+
+/* =====================================================
+   FINAL CTA
+===================================================== */
+
+.final-cta {
+
+    padding: 180px 0;
+
+    text-align: center;
+
+}
+
+
+.final-cta h2 {
+
+    font-size: clamp(60px, 9vw, 130px);
+
+    line-height: .9;
+
+    margin-bottom: 50px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.luxury-footer {
+
+    background: var(--dark);
+
+    color: white;
+
+    padding: 100px 0 30px;
+
+}
+
+
+.footer-logo {
+
+    font-family: Georgia, serif;
+
+    letter-spacing: 5px;
+
+    font-size: 24px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.luxury-footer p {
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    max-width: 300px;
+
+}
+
+
+.luxury-footer h4 {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.luxury-footer a {
+
+    display: block;
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+
+    transition: .3s;
+
+}
+
+
+.luxury-footer a:hover {
+
+    color: white;
+
+}
+
+
+.footer-bottom {
+
+    margin-top: 80px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #777;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .luxury-navbar {
+
+        background: rgba(20,20,18,.85);
+
+        padding: 20px;
+
+    }
+
+
+    .luxury-nav {
+
+        gap: 5px;
+
+        padding: 30px 0;
+
+    }
+
+
+    .luxury-nav .nav-link {
+
+        padding: 12px 0;
+
+    }
+
+
+    .reserve-link {
+
+        display: none;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: clamp(55px, 12vw, 100px);
+
+    }
+
+
+    .intro-section,
+    .rooms-section,
+    .experiences-section,
+    .gallery-section {
+
+        padding: 100px 0;
+
+    }
+
+
+    .split-image {
+
+        height: 500px;
+
+    }
+
+
+    .split-content {
+
+        min-height: 500px;
+
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .gallery-large {
+
+        grid-row: span 1;
+
+        height: 350px;
+
+    }
+
+
+    .gallery-wide {
+
+        grid-column: span 1;
+
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .hero-content {
+
+        padding: 0 20px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 55px;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 15px;
+
+    }
+
+
+    .section-title {
+
+        font-size: 48px;
+
+    }
+
+
+    .card-image {
+
+        height: 430px;
+
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .gallery-item,
+    .gallery-large,
+    .gallery-wide {
+
+        height: 400px;
+
+        grid-column: auto;
+
+        grid-row: auto;
+
+    }
+
+
+    .experience-item {
+
+        grid-template-columns: 40px 1fr;
+
+    }/* =========================================================
+   LUXEVISTA
+   Luxury Resort & Wellness Retreat
+   ========================================================= */
+
+
+/* ================= ROOT ================= */
+
+:root {
+
+    --ivory: #f5f2eb;
+    --cream: #ebe5d9;
+    --white: #ffffff;
+
+    --charcoal: #20211e;
+    --dark: #171815;
+
+    --muted: #77766f;
+
+    --gold: #a89467;
+
+    --border: rgba(32, 33, 30, 0.18);
+
+}
+
+
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: var(--ivory);
+
+    color: var(--charcoal);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.7;
+
+}
+
+
+img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+p {
+    color: var(--muted);
+}
+
+
+/* ================= TYPOGRAPHY ================= */
+
+h1,
+h2,
+h3 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: 400;
+
+}
+
+
+.eyebrow {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    color: var(--gold);
+
+}
+
+
+.light-text {
+    color: white !important;
+}
+
+
+.dark-text {
+    color: var(--charcoal);
+}
+
+
+.section-title {
+
+    font-size: clamp(40px, 5vw, 68px);
+
+    line-height: 1.05;
+
+    margin-bottom: 28px;
+
+}
+
+
+.section-description {
+
+    max-width: 650px;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+}
+
+
+.small-width {
+    max-width: 480px;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.luxury-header {
+
+    position: absolute;
+
+    width: 100%;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 1000;
+
+}
+
+
+.navbar {
+
+    padding-top: 25px;
+
+    padding-bottom: 25px;
+
+}
+
+
+.luxury-logo {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 24px;
+
+    letter-spacing: 4px;
+
+    line-height: 1;
+
+}
+
+
+.luxury-logo span {
+
+    display: block;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    margin-top: 8px;
+
+    text-align: center;
+
+}
+
+
+.nav-link {
+
+    color: rgba(255,255,255,0.9) !important;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    margin: 0 8px;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-link:hover {
+
+    color: white !important;
+
+}
+
+
+.luxury-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 28px;
+
+    border: 1px solid transparent;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition: 0.35s;
+
+}
+
+
+.luxury-btn-light {
+
+    color: white;
+
+    border-color: rgba(255,255,255,0.7);
+
+}
+
+
+.luxury-btn-light:hover {
+
+    background: white;
+
+    color: var(--charcoal);
+
+}
+
+
+.luxury-btn-dark {
+
+    background: var(--charcoal);
+
+    color: white;
+
+}
+
+
+.luxury-btn-dark:hover {
+
+    background: var(--gold);
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-section {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    background-image:
+        url("../images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.60),
+            rgba(0,0,0,0.15)
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    padding-top: 100px;
+
+}
+
+
+.hero-content h1 {
+
+    font-size: clamp(65px, 9vw, 130px);
+
+    line-height: 0.92;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-description {
+
+    color: rgba(255,255,255,0.85);
+
+    font-size: 17px;
+
+    max-width: 480px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.text-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    border-bottom: 1px solid currentColor;
+
+    padding-bottom: 5px;
+
+    transition: 0.3s;
+
+}
+
+
+.text-link:hover {
+
+    gap: 16px;
+
+}
+
+
+/* =========================================================
+   BOOKING
+   ========================================================= */
+
+.booking-section {
+
+    background: var(--charcoal);
+
+    padding: 0;
+
+}
+
+
+.booking-box {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    min-height: 130px;
+
+    color: white;
+
+}
+
+
+.booking-item {
+
+    padding: 25px 35px;
+
+    min-width: 180px;
+
+}
+
+
+.booking-item span {
+
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #aaa;
+
+    margin-bottom: 7px;
+
+}
+
+
+.booking-item strong {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-weight: 400;
+
+}
+
+
+.booking-divider {
+
+    width: 1px;
+
+    height: 45px;
+
+    background: rgba(255,255,255,0.2);
+
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro-section {
+
+    padding: 150px 0;
+
+}
+
+
+.intro-section .section-description {
+
+    margin: 0 auto 35px;
+
+}
+
+
+/* =========================================================
+   WIDE IMAGE
+   ========================================================= */
+
+.wide-image-section {
+
+    padding-bottom: 140px;
+
+}
+
+
+.wide-image-wrapper {
+
+    position: relative;
+
+    height: 75vh;
+
+    overflow: hidden;
+
+}
+
+
+.wide-image-wrapper img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.image-caption {
+
+    position: absolute;
+
+    left: 7%;
+
+    bottom: 8%;
+
+    color: white;
+
+}
+
+
+.image-caption span {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.image-caption h3 {
+
+    font-size: clamp(35px, 4vw, 60px);
+
+    margin-top: 10px;
+
+}
+
+
+/* =========================================================
+   ROOMS
+   ========================================================= */
+
+.rooms-section {
+
+    padding: 120px 0 150px;
+
+}
+
+
+.section-heading-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 70px;
+
+    gap: 50px;
+
+}
+
+
+.luxury-card {
+
+    height: 100%;
+
+}
+
+
+.card-image {
+
+    height: 500px;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+
+.card-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.8s ease;
+
+}
+
+
+.luxury-card:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+.card-number {
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 20px;
+
+    color: white;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.card-content {
+
+    padding: 30px 0;
+
+}
+
+
+.card-content h3 {
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.card-content p {
+
+    max-width: 400px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================================
+   SPLIT SECTION
+   ========================================================= */
+
+.split-section {
+
+    background: var(--cream);
+
+}
+
+
+.split-image {
+
+    min-height: 750px;
+
+}
+
+
+.split-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.split-content {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.split-inner {
+
+    padding: 80px;
+
+    max-width: 650px;
+
+}
+
+
+.split-inner > p:not(.eyebrow) {
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================================
+   WELLNESS
+   ========================================================= */
+
+.wellness-section {
+
+    min-height: 750px;
+
+    position: relative;
+
+    background-image:
+        url("../images/spa.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.wellness-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.38);
+
+}
+
+
+.wellness-content {
+
+    position: relative;
+
+    max-width: 600px;
+
+    color: white;
+
+}
+
+
+.wellness-content h2 {
+
+    font-size: clamp(55px, 7vw, 95px);
+
+    line-height: 1;
+
+    margin-bottom: 30px;
+
+}
+
+
+.wellness-content p {
+
+    color: rgba(255,255,255,0.85);
+
+    max-width: 500px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================================================
+   EXPERIENCES
+   ========================================================= */
+
+.experiences-section {
+
+    padding: 150px 0;
+
+}
+
+
+.experience-list {
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.experience-item {
+
+    display: grid;
+
+    grid-template-columns: 80px 1fr 40px;
+
+    gap: 30px;
+
+    align-items: center;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    transition: 0.3s;
+
+}
+
+
+.experience-item:hover {
+
+    padding-left: 15px;
+
+}
+
+
+.experience-item > span {
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.experience-item h3 {
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.experience-item p {
+
+    margin: 0;
+
+}
+
+
+.experience-item > i {
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   SUSTAINABILITY
+   ========================================================= */
+
+.sustainability-section {
+
+    padding: 140px 0;
+
+    background: var(--cream);
+
+}
+
+
+.sustainability-image {
+
+    height: 650px;
+
+    overflow: hidden;
+
+}
+
+
+.sustainability-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================================
+   SEASONAL
+   ========================================================= */
+
+.seasonal-section {
+
+    padding: 150px 0;
+
+}
+
+
+.season-card {
+
+    min-height: 350px;
+
+    padding: 45px;
+
+    border: 1px solid var(--border);
+
+    position: relative;
+
+    transition: 0.4s;
+
+}
+
+
+.season-card:hover {
+
+    background: var(--charcoal);
+
+    color: white;
+
+}
+
+
+.season-number {
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 70px;
+
+}
+
+
+.season-card h3 {
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.season-card p {
+
+    max-width: 330px;
+
+}
+
+
+.season-card:hover p {
+
+    color: #bbb;
+
+}
+
+
+.season-card a {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    left: 45px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    border-bottom: 1px solid currentColor;
+
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.final-cta {
+
+    min-height: 600px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url("../images/experience.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+}
+
+
+.final-cta h2 {
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    line-height: 0.95;
+
+    margin-bottom: 40px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.luxury-footer {
+
+    background: var(--dark);
+
+    color: white;
+
+    padding: 100px 0 30px;
+
+}
+
+
+.footer-logo {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 28px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.luxury-footer p {
+
+    color: #999;
+
+    max-width: 380px;
+
+}
+
+
+.luxury-footer h5 {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+
+}
+
+
+.luxury-footer a {
+
+    display: block;
+
+    color: #999;
+
+    margin-bottom: 12px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+.luxury-footer a:hover {
+
+    color: white;
+
+}
+
+
+.newsletter {
+
+    display: flex;
+
+    border-bottom: 1px solid #555;
+
+    margin-top: 25px;
+
+}
+
+
+.newsletter input {
+
+    flex: 1;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    color: white;
+
+    padding: 12px 0;
+
+}
+
+
+.newsletter input::placeholder {
+
+    color: #777;
+
+}
+
+
+.newsletter button {
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 18px;
+
+}
+
+
+.footer-bottom {
+
+    border-top: 1px solid #333;
+
+    margin-top: 80px;
+
+    padding-top: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #666;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+
+        background: rgba(20,20,18,0.96);
+
+        padding: 25px;
+
+        margin-top: 20px;
+
+    }
+
+
+    .nav-link {
+
+        padding: 10px 0 !important;
+
+    }
+
+
+    .booking-box {
+
+        flex-wrap: wrap;
+
+        padding: 20px 0;
+
+    }
+
+
+    .booking-item {
+
+        min-width: 50%;
+
+    }
+
+
+    .booking-divider {
+
+        display: none;
+
+    }
+
+
+    .booking-box .luxury-btn {
+
+        width: 100%;
+
+        margin-top: 15px;
+
+    }
+
+
+    .section-heading-row {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .split-image {
+
+        min-height: 550px;
+
+    }
+
+
+    .split-inner {
+
+        padding: 70px 30px;
+
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .navbar {
+
+        padding: 18px 10px;
+
+    }
+
+
+    .luxury-logo {
+
+        font-size: 19px;
+
+    }
+
+
+    .hero-content {
+
+        padding-top: 120px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 60px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .booking-item {
+
+        min-width: 100%;
+
+        padding: 15px 0;
+
+    }
+
+
+    .intro-section,
+    .rooms-section,
+    .experiences-section,
+    .seasonal-section,
+    .sustainability-section {
+
+        padding: 90px 0;
+
+    }
+
+
+    .wide-image-section {
+
+        padding-bottom: 90px;
+
+    }
+
+
+    .wide-image-wrapper {
+
+        height: 60vh;
+
+    }
+
+
+    .card-image {
+
+        height: 420px;
+
+    }
+
+
+    .experience-item {
+
+        grid-template-columns: 40px 1fr 25px;
+
+        gap: 15px;
+
+    }
+
+
+    .experience-item h3 {
+
+        font-size: 24px;
+
+    }
+
+
+    .experience-item p {
+
+        font-size: 14px;
+
+    }
+
+
+    .season-card {
+
+        min-height: 300px;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+}
+
+
+    .experience-item i {
+
+        display: none;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+}
+
+/* =========================================================
+   ROOMS PAGE
+   ========================================================= */
+
+.rooms-hero {
+    background-image:
+        url("../images/suite-2.jpg");
+}
+
+
+.room-details {
+
+    display: flex;
+
+    gap: 45px;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    margin: 35px 0;
+
+    padding: 20px 0;
+
+}
+
+
+.room-details p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+.room-details strong {
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: var(--charcoal);
+
+}
+
+
+.room-reverse {
+
+    background: var(--ivory);
+
+}
+
+
+@media (max-width: 575px) {
+
+    .room-details {
+
+        gap: 20px;
+
+    }
+
+}
+
+/* =========================================================
+   DINING PAGE
+   ========================================================= */
+
+.dining-hero {
+
+    background-image:
+        url("../images/dining.jpg");
+
+}
+
+
+.dining-details {
+
+    display: flex;
+
+    gap: 40px;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    margin: 35px 0;
+
+    padding: 20px 0;
+
+}
+
+
+.dining-details p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+.dining-details strong {
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: var(--charcoal);
+
+}
+
+
+/* Chef's Table */
+
+.dining-feature-box {
+
+    min-height: 420px;
+
+    border: 1px solid var(--border);
+
+    padding: 45px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.dining-feature-number {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 30px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.dining-feature-box h3 {
+
+    font-size: clamp(38px, 4vw, 55px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+}
+
+
+.dining-feature-box p {
+
+    max-width: 450px;
+
+}
+
+
+.dining-feature-line {
+
+    width: 100%;
+
+    height: 1px;
+
+    background: var(--border);
+
+    margin: 25px 0;
+
+}
+
+
+.dining-feature-box > span {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: var(--gold);
+
+}
+
+
+/* Destination dining */
+
+.dining-night {
+
+    background-image:
+        url("../images/experience.jpg");
+
+}
+
+
+/* Ingredient list */
+
+.ingredient-list {
+
+    margin-top: 35px;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.ingredient-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.ingredient-item span {
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.ingredient-item strong {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+}
+
+
+@media (max-width: 575px) {
+
+    .dining-details {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .dining-feature-box {
+
+        min-height: 350px;
+
+        padding: 30px;
+
+    }
+
+
+    .ingredient-item strong {
+
+        font-size: 18px;
+
+    }
+
+}
+
+/* =========================================================
+   EXPERIENCES PAGE
+   ========================================================= */
+
+.experiences-hero {
+
+    background-image:
+        url("../images/experience.jpg");
+
+}
+
+
+/* =========================================================
+   EXPERIENCE CATEGORY CARDS
+   ========================================================= */
+
+.experience-category-card {
+
+    height: 100%;
+
+}
+
+
+.category-image {
+
+    height: 480px;
+
+    overflow: hidden;
+
+}
+
+
+.category-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.8s ease;
+
+}
+
+
+.experience-category-card:hover
+.category-image img {
+
+    transform: scale(1.04);
+
+}
+
+
+.category-content {
+
+    padding: 30px 0;
+
+    position: relative;
+
+}
+
+
+.category-number {
+
+    position: absolute;
+
+    right: 0;
+
+    top: 35px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.category-content h3 {
+
+    font-size: 35px;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+
+}
+
+
+.category-content p:not(.eyebrow) {
+
+    max-width: 450px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================================
+   SEASONAL FEATURE
+   ========================================================= */
+
+.seasonal-feature {
+
+    min-height: 470px;
+
+    border: 1px solid var(--border);
+
+    padding: 55px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.seasonal-feature-number {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 30px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.seasonal-feature h3 {
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+
+}
+
+
+.seasonal-feature p:not(.eyebrow) {
+
+    max-width: 450px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .category-image {
+
+        height: 400px;
+
+    }
+
+
+    .category-content h3 {
+
+        font-size: 30px;
+
+    }
+
+
+    .seasonal-feature {
+
+        min-height: 380px;
+
+        padding: 30px;
+
+    }
+
+}
+
+/* =========================================
+   GALLERY PAGE
+========================================= */
+
+.gallery-hero {
+    background-image: url("../images/gallery-1.jpg");
+}
+
+
+/* =========================================
+   GALLERY GRID
+========================================= */
+
+.gallery-section {
+    padding: 0 0 120px;
+    background: var(--ivory);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+    align-items: start;
+}
+
+
+/* =========================================
+   GALLERY ITEMS
+========================================= */
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    background: var(--cream);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+
+/* Image proportions */
+
+.gallery-large {
+    grid-column: span 7;
+    height: 720px;
+}
+
+.gallery-small {
+    grid-column: span 5;
+    height: 500px;
+}
+
+.gallery-medium {
+    grid-column: span 5;
+    height: 620px;
+}
+
+.gallery-wide {
+    grid-column: span 7;
+    height: 620px;
+}
+
+
+/* =========================================
+   IMAGE HOVER
+========================================= */
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   GALLERY CAPTION
+========================================= */
+
+.gallery-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 35px;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0)
+        );
+
+    transform: translateY(8px);
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+.gallery-caption span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.gallery-caption h3 {
+    margin: 0 0 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 30px;
+    font-weight: 400;
+
+    line-height: 1.1;
+}
+
+.gallery-caption p {
+    margin: 0;
+
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+
+/* =========================================
+   GALLERY VISUAL STATEMENT
+========================================= */
+
+.gallery-statement {
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    background-image: url("../images/gallery-5.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-statement-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.38);
+}
+
+.gallery-statement-content {
+    position: relative;
+
+    max-width: 650px;
+
+    color: var(--white);
+}
+
+.gallery-statement-content h2 {
+    margin: 20px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(55px, 7vw, 100px);
+    font-weight: 400;
+
+    line-height: 0.95;
+}
+
+.gallery-statement-content p:not(.eyebrow) {
+    max-width: 400px;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   GALLERY DETAILS
+========================================= */
+
+.gallery-detail {
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 45px;
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease;
+}
+
+.gallery-detail:hover {
+    transform: translateY(-6px);
+
+    background: var(--cream);
+}
+
+.detail-number {
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.gallery-detail i {
+    display: block;
+
+    margin-bottom: 40px;
+
+    font-size: 26px;
+
+    color: var(--gold);
+}
+
+.gallery-detail h3 {
+    margin-bottom: 15px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.gallery-detail p {
+    max-width: 330px;
+
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: var(--muted);
+}
+
+
+/* =========================================
+   GALLERY RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .gallery-large {
+        grid-column: span 12;
+        height: 600px;
+    }
+
+    .gallery-small {
+        grid-column: span 6;
+        height: 450px;
+    }
+
+    .gallery-medium {
+        grid-column: span 6;
+        height: 500px;
+    }
+
+    .gallery-wide {
+        grid-column: span 12;
+        height: 500px;
+    }
+
+    .gallery-statement {
+        min-height: 600px;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .gallery-section {
+        padding-bottom: 80px;
+    }
+
+    .gallery-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .gallery-item,
+    .gallery-large,
+    .gallery-small,
+    .gallery-medium,
+    .gallery-wide {
+        width: 100%;
+        height: 430px;
+    }
+
+    .gallery-caption {
+        padding: 25px;
+    }
+
+    .gallery-caption h3 {
+        font-size: 25px;
+    }
+
+    .gallery-statement {
+        min-height: 520px;
+    }
+
+    .gallery-statement-content h2 {
+        font-size: 55px;
+    }
+
+    .gallery-detail {
+        min-height: 270px;
+        padding: 30px;
+    }
+
+}
+
+/* =========================================
+   CONTACT PAGE
+========================================= */
+
+.contact-hero {
+    background-image: url("../images/resort.jpg");
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.contact-information {
+    padding: 0 0 120px;
+    background: var(--ivory);
+}
+
+.contact-info-box {
+    min-height: 340px;
+
+    padding: 45px;
+
+    position: relative;
+
+    border: 1px solid var(--border);
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease;
+}
+
+.contact-info-box:hover {
+    transform: translateY(-5px);
+    background: var(--cream);
+}
+
+.contact-number {
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.contact-info-box i {
+    display: block;
+
+    margin-bottom: 35px;
+
+    font-size: 27px;
+
+    color: var(--gold);
+}
+
+.contact-info-box h3 {
+    margin: 15px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+.contact-info-box > p:last-child {
+    max-width: 300px;
+
+    margin: 20px 0 0;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: var(--muted);
+}
+
+
+/* =========================================
+   RESERVATION
+========================================= */
+
+.reservation-section {
+    padding: 120px 0;
+
+    background: var(--cream);
+}
+
+.reservation-note {
+    margin-top: 60px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid var(--border);
+}
+
+.reservation-note span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.reservation-note p {
+    max-width: 400px;
+
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.luxury-form {
+    padding: 50px;
+
+    background: var(--ivory);
+
+    border: 1px solid var(--border);
+}
+
+.luxury-form label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 10px;
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.luxury-form .form-control,
+.luxury-form .form-select {
+    min-height: 52px;
+
+    border-radius: 0;
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    font-size: 13px;
+
+    box-shadow: none;
+}
+
+.luxury-form textarea.form-control {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+.luxury-form .form-control:focus,
+.luxury-form .form-select:focus {
+    border-color: var(--charcoal);
+
+    box-shadow: none;
+
+    background: var(--white);
+}
+
+.luxury-form .form-control::placeholder {
+    color: #99978f;
+}
+
+
+/* =========================================
+   CONTACT LOCATION
+========================================= */
+
+.contact-location {
+    min-height: 680px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background-image: url("../images/experience.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-location-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.42);
+}
+
+.contact-location-content {
+    position: relative;
+
+    max-width: 650px;
+
+    color: var(--white);
+}
+
+.contact-location-content h2 {
+    margin: 20px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+}
+
+.contact-location-content p:not(.eyebrow) {
+    max-width: 430px;
+
+    margin-bottom: 30px;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FAQ
+========================================= */
+
+.faq-item {
+    display: flex;
+
+    gap: 30px;
+
+    padding: 30px 0;
+
+    border-top: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item > span {
+    flex-shrink: 0;
+
+    color: var(--gold);
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.faq-item h3 {
+    margin-bottom: 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.faq-item p {
+    max-width: 550px;
+
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: var(--muted);
+}
+
+
+/* =========================================
+   CONTACT RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .contact-information {
+        padding-bottom: 80px;
+    }
+
+    .reservation-section {
+        padding: 90px 0;
+    }
+
+    .reservation-note {
+        margin-top: 35px;
+    }
+
+    .contact-location {
+        min-height: 570px;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .contact-info-box {
+        min-height: 300px;
+        padding: 30px;
+    }
+
+    .luxury-form {
+        padding: 25px;
+    }
+
+    .contact-location {
+        min-height: 520px;
+    }
+
+    .contact-location-content h2 {
+        font-size: 55px;
+    }
+
+    .faq-item {
+        gap: 15px;
+    }
+
+    .faq-item h3 {
+        font-size: 21px;
+    }
+
+}
